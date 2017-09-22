@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import Header from '../stalees/table-header';
@@ -6,7 +7,7 @@ import { RowCharacter as Row } from '../stalees/table-row';
 
 import { Routes } from '../routes';
 
-class Home extends React.Component {
+class Character extends React.Component {
 
     constructor(props) {
         super(props);
@@ -28,7 +29,7 @@ class Home extends React.Component {
     }
 
     onClick(index) {
-        const { history } = this.props
+        const { router } = this.context
         if (index < 0) {
             alert('The Id is wrong');
             return;
@@ -37,7 +38,7 @@ class Home extends React.Component {
         const url = this.state.characters[index].url;
         const arr = url.split('/');
         const id = arr[arr.length - 2];
-        history.push(`${Routes.CharacterDetail}${id}`);
+        router.push(`${Routes.CharacterDetail}${id}/`);
     }
 
     render() {
@@ -63,4 +64,8 @@ class Home extends React.Component {
 
 }
 
-export default Home;
+Character.contextTypes = {
+    router: PropTypes.object.isRequired
+};
+
+export default Character;

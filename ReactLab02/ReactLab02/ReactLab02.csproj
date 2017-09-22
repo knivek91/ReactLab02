@@ -155,9 +155,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="gulpfile.js" />
+    <Content Include="Public\js\dist\main.bundle.min.js" />
     <Content Include="Public\js\src\dump\main-links.jsx" />
     <Content Include="Public\js\src\main.js" />
     <Content Include="Public\js\src\routes.js" />
+    <Content Include="Public\js\src\smart\character-detail.jsx" />
     <Content Include="Public\js\src\smart\characters.jsx" />
     <Content Include="Public\js\src\smart\home.jsx" />
     <Content Include="Public\js\src\smart\planets.jsx" />
@@ -178,7 +180,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Public\js\dist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
