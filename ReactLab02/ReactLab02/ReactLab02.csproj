@@ -157,11 +157,13 @@
     <Content Include="gulpfile.js" />
     <Content Include="Public\js\dist\main.bundle.min.js" />
     <Content Include="Public\js\src\dump\main-links.jsx" />
+    <Content Include="Public\js\src\layout\layout.jsx" />
     <Content Include="Public\js\src\main.js" />
     <Content Include="Public\js\src\routes.js" />
     <Content Include="Public\js\src\smart\character-detail.jsx" />
     <Content Include="Public\js\src\smart\characters.jsx" />
     <Content Include="Public\js\src\smart\home.jsx" />
+    <Content Include="Public\js\src\smart\planet-detail.jsx" />
     <Content Include="Public\js\src\smart\planets.jsx" />
     <Content Include="Public\js\src\stalees\about.js" />
     <Content Include="Public\js\src\stalees\contact.js" />

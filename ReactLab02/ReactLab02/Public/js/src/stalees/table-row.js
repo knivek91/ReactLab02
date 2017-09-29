@@ -41,3 +41,45 @@ export const RowCharacterDetail = ({ character }) => (
         </tr>
     </tbody>
 );
+
+
+export const RowPlanetDetail = ({ planet }) => (
+    <tbody>
+        <tr>
+            <td>Name:</td>
+            <td>{planet.name}</td>
+        </tr>
+        <tr>
+            <td>Rotation Period:</td>
+            <td>{planet.rotation_period}</td>
+        </tr>
+        <tr>
+            <td>Orbital Period:</td>
+            <td>{planet.orbital_period}</td>
+        </tr>
+        <tr>
+            <td>Diameter:</td>
+            <td>{planet.diameter}</td>
+        </tr>
+        <tr>
+            <td>Climate:</td>
+            <td>{planet.climate}</td>
+        </tr>
+        <tr>
+            <td>Gravity:</td>
+            <td>{planet.gravity}</td>
+        </tr>
+        <tr>
+            <td>Terrain:</td>
+            <td>{planet.terrain}</td>
+        </tr>
+        <tr>
+            <td>Surface Water:</td>
+            <td>{planet.surface_water}</td>
+        </tr>
+        <tr>
+            <td>Population:</td>
+            <td>{planet.population}</td>
+        </tr>
+    </tbody>
+);

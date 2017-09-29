@@ -8,13 +8,8 @@ import Characters from './smart/characters';
 import Planets from './smart/planets';
 import Home from './smart/home';
 import CharacterDetail from './smart/character-detail';
-
-const Layout = (props) => (
-    <div className="jumbotron">
-        <p>Layout</p>
-        {props.children}
-    </div>
-);
+import PlanetDetail from './smart/planet-detail';
+import Layout from './layout/layout';
 
 render(
     <Router history={browserHistory} >
@@ -22,8 +17,10 @@ render(
         <Route path={RouterRoutes.Characters} component={Characters} />
         <Route path={RouterRoutes.CharacterDetail} component={CharacterDetail} />
         <Route path={RouterRoutes.Planets} component={Planets} />
+        <Route path={RouterRoutes.PlanetDetail} component={PlanetDetail} />
         <Route path={RouterRoutes.Layout} component={Layout} >
-            <Route path={RouterRoutes.LayoutAbout} component={Home} />
+            <Route path={RouterRoutes.LayoutCharacters} component={Characters} />
+            <Route path={RouterRoutes.LayoutPlanet} component={Planets} />
         </Route>
     </Router>,
     document.getElementById('app')

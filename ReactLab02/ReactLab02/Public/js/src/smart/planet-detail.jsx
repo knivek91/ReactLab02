@@ -3,33 +3,33 @@ import axios from 'axios';
 import { Link } from 'react-router';
 
 import Header from '../stalees/table-header';
-import { RowCharacterDetail as Tbody } from '../stalees/table-row';
+import { RowPlanetDetail as Tbody } from '../stalees/table-row';
 
 import { Routes } from '../routes';
 
-class CharacterDetail extends React.Component {
+class PlanetDetail extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            character: {},
+            planet: {},
             headers: ['Property', 'Value']
         };
     }
 
     componentWillMount() {
         const { id } = this.props.params;
-        axios.get(`https://swapi.co/api/people/${id}`)
+        axios.get(`https://swapi.co/api/planets/${id}`)
             .then(({ data }) => {
-                const character = data;
-                this.setState({ character });
+                const planet = data;
+                this.setState({ planet });
             })
             .catch((err) => { console.log(err); alert('there was an error retreiving the data.'); });
     }
 
     render() {
 
-        const { headers, character } = this.state
+        const { headers, planet } = this.state
 
         const ths = headers.map((item, index) => <Header key={index} text={item} />)
 
@@ -43,7 +43,7 @@ class CharacterDetail extends React.Component {
                             {ths}
                         </tr>
                     </thead>
-                    <Tbody character={character} />
+                    <Tbody planet={planet} />
                 </table>
             </div>
         )
@@ -51,4 +51,4 @@ class CharacterDetail extends React.Component {
 
 }
 
-export default CharacterDetail;
+export default PlanetDetail;

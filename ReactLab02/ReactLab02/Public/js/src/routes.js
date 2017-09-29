@@ -7,8 +7,10 @@ const layout = 'layout/';
 export const Router = {
     Characters: `${domain}character/`,
     CharacterDetail: `${domain}character-detail/:id/`,
+    LayoutCharacters: `${domain}${layout}character/`,
     Planets: `${domain}planet/`,
     PlanetDetail: `${domain}planet-detail/:id/`,
+    LayoutPlanet: `${domain}${layout}planet/`,
     Home: `${domain}`,
     Layout: `${domain}${layout}`
 };
@@ -19,8 +21,10 @@ export const Router = {
 export const Routes = {
     Characters: `${domain}character/`,
     CharacterDetail: `${domain}character-detail/`,
+    LayoutCharacters: `${domain}${layout}character/`,
     Planets: `${domain}planet/`,
     PlanetDetail: `${domain}planet-detail/`,
+    LayoutPlanets: `${domain}${layout}planet/`,
     Home: `${domain}`,
     Layout: `${domain}${layout}`
 };
